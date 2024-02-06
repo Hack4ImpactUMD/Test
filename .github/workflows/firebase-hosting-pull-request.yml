@@ -23,5 +23,5 @@ jobs:
         with:
           entryPoint: ./react-app # Make sure your react-app is called react-app
           repoToken: "${{ secrets.GITHUB_TOKEN }}"
-          firebaseServiceAccount: "${{ secrets.FIREBASE_SERVICE_ACCOUNT_PRJECT3-e2b32 }}" # Make sure your change this to your project id
+          firebaseServiceAccount: "${{ secrets.FIREBASE_SERVICE_ACCOUNT_PRJECT3-E2B32 }}" # Make sure your change this to your project id
           projectId: prject3-e2b32 # Change to your project id
