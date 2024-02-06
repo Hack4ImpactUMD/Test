@@ -8,7 +8,7 @@ jobs:
     if: "${{ github.event.pull_request.head.repo.full_name == github.repository }}"
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v2
+      - uses: actions/checkout@v4
         with:
           persist-credentials: false
       - name: Install npm dependencies
@@ -23,5 +23,5 @@ jobs:
         with:
           entryPoint: ./react-app # Make sure your react-app is called react-app
           repoToken: "${{ secrets.GITHUB_TOKEN }}"
-          firebaseServiceAccount: "${{ secrets.FIREBASE_SERVICE_ACCOUNT_PRJECT3-e2b32 }}"
-          projectId: prject3-e2b32 # Change to your project name
+          firebaseServiceAccount: "${{ secrets.FIREBASE_SERVICE_ACCOUNT_PRJECT3-e2b32 }}" # Make sure your change this to your project id
+          projectId: prject3-e2b32 # Change to your project id
