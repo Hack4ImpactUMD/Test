@@ -12,16 +12,16 @@ jobs:
         with:
           persist-credentials: false
       - name: Install npm dependencies
-        working-directory: ./react-app
+        working-directory: ./react-app # Make sure your react-app is called react-app
         run: npm install
       - name: npm init
         run: npm init -y
       - name: deploy it
-        working-directory: ./react-app
+        working-directory: ./react-app # Make sure your react-app is called react-app
         run: CI=false && npm run build
       - uses: FirebaseExtended/action-hosting-deploy@v0
         with:
-          entryPoint: ./react-app
+          entryPoint: ./react-app # Make sure your react-app is called react-app
           repoToken: "${{ secrets.GITHUB_TOKEN }}"
-          firebaseServiceAccount: "${{ secrets.FIREBASE_SERVICE_ACCOUNT_YKNOT_42027 }}"
-          projectId: prject3-e2b32
+          firebaseServiceAccount: "${{ secrets.FIREBASE_SERVICE_ACCOUNT_PRJECT3-e2b32 }}"
+          projectId: prject3-e2b32 # Change to your project name
