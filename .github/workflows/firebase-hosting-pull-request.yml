@@ -8,11 +8,20 @@ jobs:
     if: "${{ github.event.pull_request.head.repo.full_name == github.repository }}"
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v4
-      - run: npm ci && npm run build
+      - uses: actions/checkout@v2
+        with:
+          persist-credentials: false
+      - name: Install npm dependencies
+        working-directory: ./react-app
+        run: npm install
+      - name: npm init
+        run: npm init -y
+      - name: deploy it
+        working-directory: ./react-app
+        run: CI=false && npm run build
       - uses: FirebaseExtended/action-hosting-deploy@v0
         with:
           entryPoint: ./react-app
           repoToken: "${{ secrets.GITHUB_TOKEN }}"
-          firebaseServiceAccount: "${{ secrets.FIREBASE_SERVICE_ACCOUNT_PRJECT3_E2B32 }}"
+          firebaseServiceAccount: "${{ secrets.FIREBASE_SERVICE_ACCOUNT_YKNOT_42027 }}"
           projectId: prject3-e2b32
