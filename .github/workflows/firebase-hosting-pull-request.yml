@@ -9,10 +9,19 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
-      - run: npm ci && npm run build
+        with:
+          persist-credentials: false
+      - name: Install npm dependencies
+        working-directory: ./react-app # Make sure your react-app is called react-app
+        run: npm install
+      - name: npm init
+        run: npm init -y
+      - name: deploy it
+        working-directory: ./react-app # Make sure your react-app is called react-app
+        run: CI=false && npm run build
       - uses: FirebaseExtended/action-hosting-deploy@v0
         with:
-          entryPoint: ./react-app
+          entryPoint: ./react-app # Make sure your react-app is called react-app
           repoToken: "${{ secrets.GITHUB_TOKEN }}"
-          firebaseServiceAccount: "${{ secrets.FIREBASE_SERVICE_ACCOUNT_PRJECT3_E2B32 }}"
-          projectId: prject3-e2b32
+          firebaseServiceAccount: "${{ secrets.FIREBASE_SERVICE_ACCOUNT_PRJECT3-E2B32 }}" # Make sure your change this to your project id
+          projectId: prject3-e2b32 # Change to your project id

@@ -7,6 +7,7 @@ function App(): JSX.Element {
       <Routes>
         <Route path="/first" element={<h1>Hello</h1>}></Route>
         <Route path="/second" element={<h1>Not Hello</h1>}></Route>
+        <Route path="*" element={<h1>Page Not Found</h1>}></Route>
       </Routes>
     </BrowserRouter>
   );
