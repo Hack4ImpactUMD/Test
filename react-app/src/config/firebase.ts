@@ -14,13 +14,12 @@ import { getFunctions } from 'firebase/functions';
 // For Firebase JS SDK v7.20.0 and later, measurementId is optional
 
 const firebaseConfig = {
-  apiKey: /* add app info here */,
-  authDomain: /* add app info here */,
-  projectId: /* add app info here */,
-  storageBucket: /* add app info here */,
-  messagingSenderId: /* add app info here */,
-  appId: /* add app info here */,
-  measurementId: /* add app info here */,
+  apiKey: 'AIzaSyB3k4Li2co3h4tVA-ES5F1sxa4nbxdMSKs',
+  authDomain: 'prject3-e2b32.firebaseapp.com',
+  projectId: 'prject3-e2b32',
+  storageBucket: 'prject3-e2b32.appspot.com',
+  messagingSenderId: '941516456216',
+  appId: '1:941516456216:web:c22b0c4af63a24abd51e6d',
 };
 
 // Initialize Firebase
