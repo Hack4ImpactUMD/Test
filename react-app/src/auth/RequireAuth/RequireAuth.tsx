@@ -12,9 +12,7 @@ const RequireAuth: React.FC<Props> = ({ children }) => {
   if (authContext.loading) {
     return (
       /*  Placeholder for some loading component */
-      <div className={styles.loadingContainer}>
-        <Loading />;
-      </div>
+      <div className={styles.loadingContainer}></div>
     );
   } else if (!authContext.user) {
     return <Navigate to="/login" state={{ redir: window.location.pathname }} />;
