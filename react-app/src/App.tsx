@@ -5,8 +5,12 @@ function App(): JSX.Element {
   return (
     <BrowserRouter>
       <Routes>
-        <Route path="/first">Hello</Route>
-        <Route path="/second">Not Hello</Route>
+        <Route path="/first">
+          <div>Hello</div>
+        </Route>
+        <Route path="/second">
+          <div>Not Hello</div>
+        </Route>
       </Routes>
     </BrowserRouter>
   );
